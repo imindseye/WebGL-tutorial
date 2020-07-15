@@ -8,3 +8,4 @@ by Prof. Han-Wei Shen (shen.94@osu.edu)
 4. viewport-demo.html/js: display the same 2 triangles over 9 different viewports; allow change background color
 5. color-triangles.html/js: add an additional color VBO to the shader. Notice how fragment colors are interpolated from the triangle vertices 
 6. color-interleaved.html/js: set an interleaved position/color into a single VBO; and then assign the positions/colors to two different attribute arrays 
+7. element-array/html/js: show you how to draw triangles using an element array VBO to index triangle vertices 
