@@ -21,12 +21,12 @@ void main(void) {
 <script id="shader-vs" type="x-shader/x-vertex">
 
 attribute vec3 aVertexPosition;   // two array buffer VBOs - position and color attributes 
-attribute vec4 aVertexColor;
+attribute vec3 aVertexColor;
 varying vec4 vColor;  // this is a varying which will be interpolated to the fragments 
 
     void main(void) {
       gl_Position = vec4(aVertexPosition, 1.0);
-      vColor = aVertexColor;   // pass the vertex color as a varying variable
+      vColor = vec4(aVertexColor, 1.0);   // pass the vertex color as a varying variable
     }
 </script>
 <script type="text/javascript" src="shaders_setup.js"></script>
