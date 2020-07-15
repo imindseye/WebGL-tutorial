@@ -12,3 +12,4 @@ Learn WebGL by studying the sample code in the following order:
 6. color-interleaved.html/js: set an interleaved position/color into a single VBO; and then assign the positions/colors to two different attribute arrays 
 7. element-array/html/js: show you how to draw triangles using an element array VBO to index triangle vertices 
 8. simple-transform.html/hs: simple transformation of 2D triangles using glm (left mouse click and drag to rotate) 
+9. Mtransforms.html/js: demonstrate how to apply different transformations to different objects. 
