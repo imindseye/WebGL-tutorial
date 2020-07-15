@@ -15,3 +15,4 @@ Learn WebGL by studying the sample code in the following order:
 9. Mtransforms.html/js: demonstrate how to apply different transformations to different objects. 
 10. hierarhicalXform.html/js: demonstrate how hierarchical transformation can be constructed for three square. 
 11. 3Dcube.html/js: the first 3D cube drawing program where you will learn how to set up a camera and needed transformation matrices  
+12. shading.html/js: implementation of Gouraud shading for a cylinder.  
