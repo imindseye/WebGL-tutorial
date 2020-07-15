@@ -1,4 +1,4 @@
-# WebGL
+# WebGL Tutorial
 Sample WebGL program for OSU CSE 5542 
 by Prof. Han-Wei Shen (shen.94@osu.edu) 
 
