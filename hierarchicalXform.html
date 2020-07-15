@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>hwshen WebGL &mdash; hXform </title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+
+<!--  ************** Fragment Shader ************* --> 
+<script id="shader-fs" type="x-shader/x-fragment">
+precision mediump float;
+varying vec4 vColor; 
+
+void main(void) {
+        gl_FragColor = vColor; 
+    }
+</script>
+
+<!--  ************** Vertex Shader ************* --> 
+<script id="shader-vs" type="x-shader/x-vertex">
+
+    attribute vec3 aVertexPosition;
+    attribute vec3 aVertexColor;
+    varying vec4 vColor;
+
+    uniform mat4 uMVMatrix;
+
+    void main(void) {
+
+      gl_PointSize = 10.0; 
+      gl_Position = uMVMatrix*vec4(aVertexPosition, 1.0);
+
+      vColor = vec4(aVertexColor, 1.0); 
+    }
+</script>
+
+
+<script type="text/javascript" src="JS/shaders_setup.js"></script>
+<script type="text/javascript" src="hierarchicalXform.js"></script>
+
+
+</head>
+
+
+<body onload="webGLStart();">
+
+    <canvas id="code04-canvas"style="border:none;"width="700"height="700"></canvas>
+
+
+    <h4> Geometry:  </h4>
+    <button  onclick="obj(1)"> Square1</button>
+    <button  onclick="obj(2)"> Square2</button>
+    <button  onclick="obj(3)"> Square3</button>
+
+
+    <h4> Background:  </h4>
+    <button  onclick="BG(1,0,0)"> Red</button>
+    <button  onclick="BG(0,1,0)"> Green</button>
+    <button  onclick="BG(0,0,1)"> Blue</button>
+    <button  onclick="BG(0.5,0.5,0.5)"> Grey</button>
+    <button  onclick="BG(0,0,0)"> Black</button>
+    <button  onclick="BG(1,1,1)"> White</button>
+
+
+
+    <h4>
+      - Click on the left mouse button and move the coursor to rotate. select square 1, 2, 3 and apply 'X, 'x', 'Y', 'y'
+    </h4>
+
+    </h4>
+    <button  onclick="redraw()"> Go Back! </button>
+    </div>
+
+      <footer>
+    <center>
+      <p>&copy; WebGL example: Han-Wei Shen, Ohio State University, 2016</p>
+    </center>
+    </footer>
+    
+</body>
+
+
+</html>
+
