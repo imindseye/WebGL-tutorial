@@ -13,4 +13,4 @@ Learn WebGL by studying the sample code in the following order:
 7. element-array/html/js: show you how to draw triangles using an element array VBO to index triangle vertices 
 8. simple-transform.html/hs: simple transformation of 2D triangles using glm (left mouse click and drag to rotate) 
 9. Mtransforms.html/js: demonstrate how to apply different transformations to different objects. 
-10.hierarhicalXform.html/js: demonstrate how hierarchical transformation can be constructed for three square. 
+10. hierarhicalXform.html/js: demonstrate how hierarchical transformation can be constructed for three square. 
