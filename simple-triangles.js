@@ -4,6 +4,8 @@
 //
 //    Use Array Buffer VBO to draw a square (two triangles)
 //
+//    Han-Wei Shen (shen.94@osu.edu)  
+//
     var gl;
     var shaderProgram;
 
