@@ -20,3 +20,7 @@ Learn WebGL by studying the sample code in the following order:
 14. teapot.html/js: A 3D rendering of Utah teapot in Json format
 15. textureTeapot.html/hs: A texture mapped Utah teapot in Json format
 16. cubeMappedTeapot.httml/js: Environment cube map example 
+17. teapotFBO.html/js: A frame buffer object example 
+
+
+That's it folks, for now. 
