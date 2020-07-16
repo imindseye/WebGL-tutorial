@@ -18,3 +18,4 @@ Learn WebGL by studying the sample code in the following order:
 12. shading.html/js: implementation of Gouraud shading for a cylinder.  
 13. texture.html/js: this shows you how to perform 2D texture mapping. make sure you have downloaded the file earth.png. Also, you need to disable the browser restriction of reading local files (browser specific). 
 14. teapot.html/js: A 3D rendering of Utah teapot in Json format
+15. A texture mapped Utah teapot in Json format
