@@ -23,4 +23,4 @@ Learn WebGL by studying the sample code in the following order:
 17. teapotFBO.html/js: A frame buffer object example (wiah a slight visibility bug)  
 
 
-{\bf That's it folks, for now. }
+That's it folks, for now.
