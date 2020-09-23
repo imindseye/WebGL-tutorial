@@ -25,6 +25,6 @@ Learn WebGL by studying the sample code in the following order:
 
 Additional files for OSU CSE 5542 AU 2020 
 
-A. uniform-color-xform.html/js: this program show you how to use uniform variable to set per object color (not per vertex color) and also how to use 'r' and 'R' to rotate two squares, one counter clockwise and the other clockwise. 
+A. uniform-color-xform.html/js: this program shows you how to use uniform variable to set per object color (not per vertex color) and also how to use 'r' and 'R' to rotate two squares, one counter clockwise and the other clockwise. 
  
 That's it folks, for now.
