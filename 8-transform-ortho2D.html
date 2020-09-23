@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>hwshen WebGL &mdash; code03 </title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<!--  ************** Fragment Shader ************* --> 
+<script id="shader-fs" type="x-shader/x-fragment">
+precision mediump float;
+varying vec4 vColor; 
+
+void main(void) {
+        gl_FragColor = vColor; 
+    }
+</script>
+
+<!--  ************** Vertex Shader ************* --> 
+<script id="shader-vs" type="x-shader/x-vertex">
+
+    attribute vec3 aVertexPosition;
+    attribute vec3 aVertexColor;
+    varying vec4 vColor;
+
+   uniform mat4 uMVMatrix;
+   uniform mat4 uPMatrix; 
+
+    void main(void) {
+
+     gl_PointSize = 10.0; 
+
+      //gl_Position = uMVMatrix*vec4(aVertexPosition, 1.0);
+      gl_Position = uPMatrix* uMVMatrix*vec4(aVertexPosition, 1.0);
+
+      vColor = vec4(aVertexColor,1.0); 
+    }
+</script>
+
+<script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+<script type="text/javascript" src="shaders_setup.js"></script>
+<script type="text/javascript" src="8-transform-ortho2D.js"></script>
+
+
+</head>
+
+
+<body onload="webGLStart();">
+    <canvas id="code03-canvas"style="border:none;"width="700"height="700"></canvas>
+
+    <h4> Geometry:  </h4>
+    <button  onclick="geometry(0)"> POINTS</button>
+    <button  onclick="geometry(1)"> LINEs</button>
+    <button  onclick="geometry(2)"> FACES</button>
+
+    <h4> Background:  </h4>
+    <button  onclick="BG(1,0,0)"> Red</button>
+    <button  onclick="BG(0,1,0)"> Green</button>
+    <button  onclick="BG(0,0,1)"> Blue</button>
+    <button  onclick="BG(0.5,0.5,0.5)"> Grey</button>
+    <button  onclick="BG(0,0,0)"> Black</button>
+    <button  onclick="BG(1,1,1)"> White</button>
+
+    <div>
+    <h4>
+    Click on the left mouse button and move the coursor to rotate
+    </h4>
+    <button  onclick="redraw()"> Go Back! </button>
+    </div>
+
+</body>
+
+</html>
+
