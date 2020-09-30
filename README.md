@@ -28,5 +28,7 @@ Additional files for OSU CSE 5542 AU 2020
 A. uniform-color-xform.html/js: this program shows you how to use uniform variable to set per object color (not per vertex color) and also how to use 'r' and 'R' to rotate two squares, one counter clockwise and the other clockwise.
 
 B. 8-transform-ortho2D.html/js: this sample code show you how to use ortho2D call to change the range of visibe points from [-1,1]x[-1,1] to an arbitrary range using orthographic projection.  you use gl.ortho() to define a projection matrix and pass it to the vertex shader. 
+
+C. xform.html/js; xform2.html/js for illustrating transformations. 
  
 That's it folks, for now.
