@@ -154,14 +154,14 @@ var which_object = 1;
         model = mat4.multiply(model, mvMatrix1); 
     	draw_square(model);
 
-    	Mstack.push(model); 
+	PushMatrix(Mstack, model); 
     	console.log("push matrix"); 
 
         model = mat4.multiply(model, mvMatrix2); 
     	draw_square(model);
 
-    	model = Mstack.pop(); 
-       model = mat4.multiply(model, mvMatrix3); 
+	PoPMatrix(Mstack, model).     
+        model = mat4.multiply(model, mvMatrix3); 
     	draw_square(model);
     }
 
