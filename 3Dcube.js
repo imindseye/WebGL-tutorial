@@ -101,9 +101,10 @@ var draw_type=2;
         gl.viewport(0, 0, gl.viewportWidth, gl.viewportHeight);
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-	mat4.perspective(60, 1.0, 0.1, 100, pMatrix);  // set up the projection matrix 
+	    mat4.perspective(60, 1.0, 0.1, 100, pMatrix);  // set up the projection matrix 
 
-	vMatrix = mat4.lookAt([0,0,5], [0,0,0], [0,1,0], mvMatrix);	// set up the view matrix, multiply into the modelview matrix
+        mat4.identity(vMatrix);	
+        vMatrix = mat4.lookAt([0,0,5], [0,0,0], [0,1,0], vMatrix);	// set up the view matrix, multiply into the modelview matrix
 
         mat4.identity(mMatrix);	
 	
@@ -183,7 +184,7 @@ var draw_type=2;
         initGL(canvas);
         initShaders();
 
-	gl.enable(gl.DEPTH_TEST); 
+	    gl.enable(gl.DEPTH_TEST); 
 
         shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
         gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
