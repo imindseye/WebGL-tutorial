@@ -91,25 +91,29 @@ precision mediump float;
         vec4 ambient = ambient_coef * light_ambient; 
         float ndotl = max(dot(v_normal, light_vector), 0.0); 
 
-        vec4 diffuse = diffuse_coef * light_diffuse* ndotl;
+        vec4 diffuse = diffuse_coef * light_diffuse* vec4(ndotl, ndotl, ndotl, 1.0);
 
 //      both lines below are okay. One is to use the reflect function the other is to compute by yourself 
-//      vec3 R= normalize(vec3(reflect(-light_vector, v_normal))); 
-      	vec3 R = normalize(2.0 * ndotl *v_normal-eye_vector);
+     // vec3 R= normalize(vec3(reflect(-light_vector, v_normal))); 
+      	vec3 R = normalize(2.0 * ndotl *v_normal-light_vector);
         float rdotv = max(dot(R, eye_vector), 0.0);
 
         vec4 specular;  
+        float rdotv_val =  pow(rdotv, mat_shininess); 
         if (ndotl>0.0) 
-        specular = specular_coef* light_specular*pow(rdotv, mat_shininess); 
+        specular = specular_coef* light_specular* vec4(rdotv_val, rdotv_val, rdotv_val, 1.0);  
         else
         specular = vec4(0,0,0,1);  
 
         gl_Position = uPMatrix*uVMatrix*uMMatrix*vec4(aVertexPosition, 1.0);
 
         vColor = ambient+diffuse+specular;
-//      vColor = vec4(eye_vector, 1.0); 
+//      vColor = diffuse; 
+//       vColor = specular; 
+
+//     vColor = vec4(eye_vector, 1.0); 
 //      vColor = vec4(aVertexColor, 1.0);
-//      vColor = vec4(aVertexNormal, 1.0);
+//    vColor = vec4(aVertexNormal, 1.0);
 //      vColor = vec4(v_normal, 1.0);
 
     }
@@ -117,7 +121,7 @@ precision mediump float;
 
 
 <script type="text/javascript" src="shaders_setup.js"></script>
-<script type="text/javascript" src="shading.js"></script>
+<script type="text/javascript" src="12-shading.js"></script>
 
 
 </head>
