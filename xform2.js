@@ -220,6 +220,9 @@ function BG(red, green, blue) {
 } 
 
 function redraw() {
+    mat4.identity(mvMatrix);
+    mvMatrix = mat4.translate(mvMatrix, [-0.5, 0, 0]); 
+    mvMatrix = mat4.scale(mvMatrix, [0.2, 0.2, 0.2]); 
     drawScene();
 }
     

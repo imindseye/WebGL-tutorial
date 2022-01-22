@@ -198,7 +198,7 @@ function initSQBuffers() {
         gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexColorBuffer);
         gl.vertexAttribPointer(shaderProgram.vertexColorAttribute,squareVertexColorBuffer.itemSize, gl.FLOAT, false, 0, 0);
 
-	// draw elementary arrays - triangle indices 
+	// draw element arrays - triangle indices 
         gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, squareVertexIndexBuffer);
 
 	setMatrixUniforms();   // pass the modelview mattrix and projection matrix to the shader 
