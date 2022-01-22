@@ -263,7 +263,7 @@ function initSQBuffers() {
         gl.vertexAttribPointer(shaderProgram.vertexColorAttribute,cylinderVertexColorBuffer.itemSize, gl.FLOAT, false, 0, 0);
 	
 
-	// draw elementary arrays - triangle indices 
+	// draw element arrays - triangle indices 
 	//  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, squareVertexIndexBuffer);
 
 	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cylinderVertexIndexBuffer); 	

@@ -223,7 +223,8 @@ function BG(red, green, blue) {
 } 
 
 function redraw() {
-    Z_angle = 0; 
+    Z_angle = 0;
+    z_angle = 0;
     drawScene();
 }
     

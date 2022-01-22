@@ -75,7 +75,7 @@
         gl.vertexAttribPointer(shaderProgram.vertexColorAttribute, squareVertexBuffer.numFloats, gl.FLOAT, false,stride, offset); // 6*4 is the stride size, 3*4 is the offset 
         offset = 0; 
 
-        // draw elementary arrays - triangle indices 
+        // draw element arrays - triangle indices 
         gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, squareVertexIndexBuffer); 
         gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_SHORT, 0); 
 
